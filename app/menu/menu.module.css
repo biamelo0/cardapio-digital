@@ -1,0 +1,50 @@
+.menuGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px 90px;
+}
+
+.group h2 {
+  font-size: 1.6rem;
+  color: var(--text-dark);
+}
+
+.item {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line-dark);
+}
+
+.itemName {
+  font-size: 0.98rem;
+}
+
+.itemDots {
+  flex: 1;
+  border-bottom: 1px dotted rgba(36, 29, 23, 0.28);
+  transform: translateY(-4px);
+}
+
+.itemPrice {
+  font-family: var(--serif);
+  color: var(--accent);
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.note {
+  max-width: var(--container);
+  margin: 60px auto 0;
+  padding: 0 32px;
+  color: var(--muted-dark);
+  font-size: 0.82rem;
+}
+
+@media (max-width: 800px) {
+  .menuGrid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}
