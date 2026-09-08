@@ -38,6 +38,15 @@
   justify-content: center;
   font-size: 0.9rem;
   border: 1px dashed var(--line);
+  overflow: hidden; /* <-- Adicione isto para a imagem não vazar */
+}
+
+/* Adicione esta classe que estava faltando: */
+.mapImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Preenche toda a área sem distorcer o mapa */
+  display: block;
 }
 
 @media (max-width: 800px) {

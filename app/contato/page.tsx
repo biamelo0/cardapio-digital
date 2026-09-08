@@ -37,9 +37,11 @@ export default function ContatoPage() {
 
       <section className={styles.mapSection}>
         <div className={styles.mapPlaceholder}>
-          {/* Substitua por um iframe do Google Maps com o endereço real, ex.:
-             <iframe src="https://www.google.com/maps/embed?..." /> */}
-          <span>Mapa — insira aqui o embed do Google Maps</span>
+          <img 
+              src="/mapa.jpg" 
+              alt="Localização no mapa" 
+              className={styles.mapImage}
+            />
         </div>
       </section>
     </>
