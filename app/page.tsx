@@ -1,5 +1,6 @@
 import Link from "next/link";
 import NewsletterForm from "./components/NewsletterForm";
+import { assetPath } from "./utils/asset";
 import styles from "./page.module.css";
 
 const CATEGORIES = [
@@ -10,10 +11,10 @@ const CATEGORIES = [
 ];
 
 const DISHES = [
-  { name: "Robalo em crosta de ervas", img: "pratos/robalo.jpg" },
-  { name: "Risoto de cogumelos selvagens", img: "pratos/risoto.jpg" },
-  { name: "Cordeiro, purê de raízes", img: "pratos/cordeiro.jpg" },
-  { name: "Tarte tatin, sorvete de baunilha", img: "pratos/tarte.jpg" },
+  { name: "Robalo em crosta de ervas", img: "/pratos/robalo.jpg" },
+  { name: "Risoto de cogumelos selvagens", img: "/pratos/risoto.jpg" },
+  { name: "Cordeiro, purê de raízes", img: "/pratos/cordeiro.jpg" },
+  { name: "Tarte tatin, sorvete de baunilha", img: "/pratos/tarte.jpg" },
 ];
 
 const FEATURES = [
@@ -108,7 +109,7 @@ export default function Home() {
             </Link>
           </div>
           <div className={styles.storyImg}>
-            <img src="https://picsum.photos/id/163/900/1100" alt="Prato servido no salão do Cendre" />
+            <img src={assetPath("https://picsum.photos/id/163/900/1100")} alt="Prato servido no salão do Cendre" />
           </div>
         </div>
       </section>
@@ -143,7 +144,7 @@ export default function Home() {
             {CATEGORIES.map((c) => (
               <Link href="/menu" key={c.name} className={styles.categoryCard}>
                 <div className={styles.categoryImg}>
-                  <img src={c.img} alt="" />
+                  <img src={assetPath(c.img)} alt="" />
                 </div>
                 <h3>{c.name}</h3>
                 <p>{c.desc}</p>
@@ -175,7 +176,7 @@ export default function Home() {
                 key={i}
                 className={`${styles.galleryItem} ${g.tall ? styles.galleryTall : ""}`}
               >
-                <img src={g.img} alt="" />
+                <img src={assetPath(g.img)} alt="" />
               </div>
             ))}
           </div>
@@ -192,7 +193,7 @@ export default function Home() {
           <div className={styles.dishGrid}>
             {DISHES.map((d) => (
               <div key={d.name} className={styles.dishCard}>
-                <img src={d.img} alt={d.name} />
+                <img src={assetPath(d.img)} alt={d.name} />
                 <p>{d.name}</p>
               </div>
             ))}
@@ -222,7 +223,7 @@ export default function Home() {
       <section className={`section ${styles.chefSection}`}>
         <div className={`wrap ${styles.chefGrid}`}>
           <div className={styles.chefImg}>
-            <img src="chef.png" alt="Chef Marina Adler" />
+            <img src={assetPath("/chef.png")} alt="Chef Marina Adler" />
           </div>
           <div className={styles.chefText}>
             <span className="eyebrow">Quem cozinha</span>

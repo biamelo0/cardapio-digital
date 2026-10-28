@@ -1,3 +1,4 @@
+import { assetPath } from "../utils/asset";
 import styles from "./contato.module.css";
 
 export default function ContatoPage() {
@@ -38,7 +39,7 @@ export default function ContatoPage() {
       <section className={styles.mapSection}>
         <div className={styles.mapPlaceholder}>
           <img 
-              src="/mapa.jpg" 
+              src={assetPath("/mapa.jpg")} 
               alt="Localização no mapa" 
               className={styles.mapImage}
             />

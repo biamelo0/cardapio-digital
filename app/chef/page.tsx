@@ -1,3 +1,4 @@
+import { assetPath } from "../utils/asset";
 import styles from "./chef.module.css";
 
 const TIMELINE = [
@@ -24,7 +25,7 @@ export default function ChefPage() {
       <section className="section">
         <div className={`wrap ${styles.grid}`}>
           <div className={styles.img}>
-            <img src="chef.png" alt="Chef Marina Adler no salão do Cendre" />
+            <img src={assetPath("/chef.png")} alt="Chef Marina Adler no salão do Cendre" />
           </div>
           <div className={styles.text}>
             <span className="eyebrow">Trajetória</span>
