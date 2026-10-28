@@ -1,8 +1,9 @@
 .hero {
   height: 100svh;
   min-height: 560px;
-  background: linear-gradient(180deg, rgba(20, 16, 13, 0.55), rgba(20, 16, 13, 0.85)),
-    url("/pratos/fundo.jpg") center/cover no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   color: var(--text-light);
   display: flex;
   flex-direction: column;

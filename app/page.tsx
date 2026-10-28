@@ -71,7 +71,12 @@ const TESTIMONIALS = [
 export default function Home() {
   return (
     <>
-      <section className={styles.hero}>
+      <section
+        className={styles.hero}
+        style={{
+          backgroundImage: `linear-gradient(180deg, rgba(20, 16, 13, 0.55), rgba(20, 16, 13, 0.85)), url("${assetPath("/pratos/fundo.jpg")}")`,
+        }}
+      >
         <div className={styles.heroContent}>
           <span className={styles.heroEyebrow}>Bem-vindo ao</span>
           <h1 className={styles.heroTitle}>CENDRE</h1>
